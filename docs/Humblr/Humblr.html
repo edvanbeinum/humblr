@@ -1,0 +1,507 @@
+<html>
+<head>
+<title>Docs For Class Humblr</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">Humblr</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_Humblr.html" class="menu">class tree: Humblr</a> ]
+		  [ <a href="../elementindex_Humblr.html" class="menu">index: Humblr</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+      <b>Packages:</b><br />
+              <a href="../li_Humblr.html">Humblr</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../Humblr/_Humblr.php.html">		Humblr.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../Humblr/Humblr.html">Humblr</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: Humblr</h1>
+Source Location: /Humblr.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">A simple class to call the public API methods on Tumblr's API. You can retrieve the following types:</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>Ed van Beinum &lt;<a href="mailto:e@edvanbeinum.com">e@edvanbeinum.com</a>&gt;</li>
+      </ul>
+
+
+
+
+    
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../Humblr/Humblr.html#var$_baseHostname">$_baseHostname</a></li>
+    <li><a href="../Humblr/Humblr.html#var$_tumblrConsumerKey">$_tumblrConsumerKey</a></li>
+    <li><a href="../Humblr/Humblr.html#var$_tumblrHostname">$_tumblrHostname</a></li>
+    <li><a href="../Humblr/Humblr.html#var$_tumblrSecretKey">$_tumblrSecretKey</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../Humblr/Humblr.html#method__construct">__construct</a></li>
+    <li><a href="../Humblr/Humblr.html#methodgetAvatar">getAvatar</a></li>
+    <li><a href="../Humblr/Humblr.html#methodgetInfo">getInfo</a></li>
+    <li><a href="../Humblr/Humblr.html#methodgetPosts">getPosts</a></li>
+    <li><a href="../Humblr/Humblr.html#method_getApiUrl">_getApiUrl</a></li>
+    <li><a href="../Humblr/Humblr.html#method_getQueryString">_getQueryString</a></li>
+    <li><a href="../Humblr/Humblr.html#method_getResponse">_getResponse</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 21]<br />
+A simple class to call the public API methods on Tumblr's API. You can retrieve the following types:<br /><br /><p><ul><li>public posts</li><li>avatar image</li><li>blog info</li></ul> You will need an API key from Tumblr in order to make requests against Tumblr's API</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>Ed van Beinum &lt;<a href="mailto:e@edvanbeinum.com">e@edvanbeinum.com</a>&gt;</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$_baseHostname"></a>
+	<p></p>
+	<h4>$_baseHostname = <span class="value"></span></h4>
+	<p>[line 38]</p>
+  The Tumblr Blogs URL; XXX.tumblr.com is usual unless you are using a CNAME  in which case the domain name will work as well<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_tumblrConsumerKey"></a>
+	<p></p>
+	<h4>$_tumblrConsumerKey = <span class="value"></span></h4>
+	<p>[line 45]</p>
+  Tumblr API Consumer Key<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_tumblrHostname"></a>
+	<p></p>
+	<h4>$_tumblrHostname = <span class="value"></span></h4>
+	<p>[line 30]</p>
+  Tumblr's API URI  Typically this will be &quot;http://api.tumblr.com/v2/blog/&quot;<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_tumblrSecretKey"></a>
+	<p></p>
+	<h4>$_tumblrSecretKey = <span class="value"></span></h4>
+	<p>[line 53]</p>
+  Tumblr Secret Key  Not actually needed for performing public API requests but included here for the sake of completeness<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 69]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>Humblr __construct(
+string
+$baseHostname, string
+$consumerKey, [string
+$secretKey = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Constructor ahoy!<br /><br /><p>Usage would look something like this:  <ol><li><div class="src-line">&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$tumblrConsumerKey&nbsp;</span>=&nbsp;<span class="src-str">&quot;ESeVhsqqFQffujBLEwfzjYeaZJk3MFGDFG5gDg&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$tumblrSecretKey&nbsp;</span>=&nbsp;<span class="src-str">&quot;mZRgkPOEEL3htwJBZ5QbNwiY4LMWVZBV1dfgd00gdfg45D&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-var">$tumblr&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">Tumblr</span><span class="src-sym">(</span><span class="src-str">&quot;yoursite.tumblr.com&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-var">$tumblrConsumerKey</span><span class="src-sym">,&nbsp;</span><span class="src-var">$tumblrSecretKey</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$baseHostname</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$consumerKey</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$secretKey</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetAvatar"></a>
+	<h3>method getAvatar <span class="smalllinenumber">[line 109]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getAvatar(
+[int|null
+$size = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns an image resource of the blog's avatar, default size is 64 pixels square.<br /><br /><p>What's an image resource? Well, it's not a URL or path to an image, it is the actual binary data of the image itself  So you can use a call to this function wherever you would put an image. e.g.  <ol><li><div class="src-line">&nbsp;&lt;<span class="src-id">img&nbsp;src</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$humbler</span><span class="src-sym">-&gt;</span><span class="src-id">getAvatar</span>()</span><span class="src-str">&quot;&nbsp;</span><span class="src-id">width</span>=<span class="src-str">&quot;64&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">height</span>=<span class="src-str">&quot;64&quot;&nbsp;</span>/&gt;</div></li>
+</ol></p><p>Or you can also specify the dimensions by passing in an integer. Either: 16, 24, 30, 40, 48, 64, 96, 128, 512.  (all Tumblr Avatars are square)  <ol><li><div class="src-line">&nbsp;&lt;<span class="src-id">img&nbsp;src</span>=<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$humbler</span><span class="src-sym">-&gt;</span><span class="src-id">getAvatar</span>(128)</span><span class="src-str">&quot;&nbsp;</span><span class="src-id">width</span>=<span class="src-str">&quot;128&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">height</span>=<span class="src-str">&quot;128&quot;&nbsp;</span>/&gt;</div></li>
+</ol></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int|null&nbsp;&nbsp;</td>
+        <td><b>$size</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetInfo"></a>
+	<h3>method getInfo <span class="smalllinenumber">[line 122]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>stdClass getInfo(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Return object containing a blog's general information.<br /><br /><p>Things like title, number of posts, name, last updated and description</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>link:</b>&nbsp;&nbsp;</td><td><a href="http://www.tumblr.com/docs/en/api/v2#blog-info">http://www.tumblr.com/docs/en/api/v2#blog-info</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetPosts"></a>
+	<h3>method getPosts <span class="smalllinenumber">[line 85]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>object getPosts(
+[array
+$params = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets Blog posts from Tumblr. Extra qury string parameters can be specified by passing in an array.<br /><br /><p>So to limit the number of posts returned: array('limit' =&gt; 9) will be transformed into &amp;limit=9  For a list of all possible parameters, see @link http://www.tumblr.com/docs/en/api/v2#posts</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$params</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_getApiUrl"></a>
+	<h3>method _getApiUrl <span class="smalllinenumber">[line 135]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string _getApiUrl(
+string
+$contentType)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get the fully formed API URL complete with key and blog hostname<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$contentType</b>&nbsp;&nbsp;</td>
+        <td>Either 'posts', 'avatar' or 'info' see: http://www.tumblr.com/docs/en/api/v2</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_getQueryString"></a>
+	<h3>method _getQueryString <span class="smalllinenumber">[line 146]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string _getQueryString(
+array
+$params)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Transform an array of key values into a query string<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">array&nbsp;&nbsp;</td>
+        <td><b>$params</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_getResponse"></a>
+	<h3>method _getResponse <span class="smalllinenumber">[line 162]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string _getResponse(
+string
+$requestUrl)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sends a request to the Tumblr API. It tries to use file_get_contents() first, then Curl and then will throw an  exception if neither of those two options are available<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$requestUrl</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 26 Dec 2011 20:24:27 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
