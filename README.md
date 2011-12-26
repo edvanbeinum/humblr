@@ -17,7 +17,7 @@ The source code should be reasonably well commented, but here are some examples 
 
     <?php foreach ($posts as $post): ?>
         <div class="box col">
-            <a href="<?php echo str_replace('http://www.beatsbass.com', '', $post->post_url) ?>">
+            <a href="<?php echo $post->post_url; ?>">
                 <img src="<?php echo $post->photos[0]->original_size->url; ?>" width="250" height="250"/>
             </a>
             <?php echo $post->caption ?>
