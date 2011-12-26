@@ -34,6 +34,14 @@ class HumblrIntegrationTest extends PHPUnit_Framework_TestCase
         $this->assertSame(2, count($posts));
     }
 
+    public function test_getPosts_returns_limited_posts_without_allow_url_fopen()
+    {
+        ini_set('allow_url_fopen', 0);
+        $posts = $this->_humblr->getPosts(array('limit' => '5'));
+        $this->assertSame(5, count($posts));
+        ini_set('allow_url_fopen', 1);
+    }
+
     public function test_getPosts_returns_text_post_type()
     {
         $textPosts = $this->_humblr->getPosts(array('type' => 'text'));
@@ -43,16 +51,18 @@ class HumblrIntegrationTest extends PHPUnit_Framework_TestCase
     }
 
     public function test_getPosts_returns_photo_post_type()
-        {
-            $textPosts = $this->_humblr->getPosts(array('type' => 'photo'));
-            foreach ($textPosts as $post) {
-                $this->assertSame('photo', $post->type, 'Not all posts are of type photo');
-            }
+    {
+        $textPosts = $this->_humblr->getPosts(array('type' => 'photo'));
+        foreach ($textPosts as $post) {
+            $this->assertSame('photo', $post->type, 'Not all posts are of type photo');
         }
+    }
 
     public function test_getAvatar_returns_image()
     {
-        $this->markTestSkipped('Tumblr API returns an image resource which GD isn\'t able to retrieve data from it can only output to file to screen.');
+        $this->markTestSkipped('Tumblr API returns an image resource which GD isn\'t able to retrieve data from.' .
+            'For now, I\'m skipping this test until I can think of a good way to test it'
+        );
     }
 
     public function test_getInfo_returns_blog_info()
