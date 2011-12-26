@@ -47,7 +47,5 @@ Get Blog Info
 
 Get Blog Avatar
 
-    <?php
     <img src="<?php echo $humbler->getAvatar(128); ?>" width="128", height="128" />
-    ?>
 
