@@ -14,7 +14,7 @@ class HumblrIntegrationTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->_humblr = new Humblr('david.tumblr.com', 'ESeVhsqqFQffujBLEwfzjYeaZJk3Mks1zM8UiZBWUzGYVwZ8eU');
+        $this->_humblr = new Humblr('david.tumblr.com', 'YOUR_CONSUMER_KEY');
     }
 
     public function tearDown()
@@ -60,7 +60,7 @@ class HumblrIntegrationTest extends PHPUnit_Framework_TestCase
 
     public function test_getAvatar_returns_image()
     {
-        $this->markTestSkipped('Tumblr API returns an image resource which GD isn\'t able to retrieve data from.' .
+        $this->markTestSkipped('Tumblr API returns an image resource which the GD library isn\'t able to retrieve data from.' .
             'For now, I\'m skipping this test until I can think of a good way to test it'
         );
     }
