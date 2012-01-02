@@ -55,8 +55,8 @@ class Humblr
     /**
      * Constructor ahoy!
      * Usage would look something like this:
+     *
      * <code>
-     * <?php
      * $tumblrConsumerKey = "ESeVhsqqFQffujBLEwfzjYeaZJk3MFGDFG5gDg";
      * $tumblrSecretKey = "mZRgkPOEEL3htwJBZ5QbNwiY4LMWVZBV1dfgd00gdfg45D";
      * $tumblr = new Tumblr("yoursite.tumblr.com", $tumblrConsumerKey, $tumblrSecretKey);
@@ -79,6 +79,10 @@ class Humblr
      * So to limit the number of posts returned: array('limit' => 9) will be transformed into &limit=9
      * For a list of all possible parameters, see @link http://www.tumblr.com/docs/en/api/v2#posts
      *
+     * If the paramters used are not recognised by Tumblr, then humblr emits and error
+     * "failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found" which isn;t great. Improved error handling
+     * is the next thing on the todo list!
+     *
      * @param array $params
      * @return object
      */
@@ -94,13 +98,13 @@ class Humblr
      * What's an image resource? Well, it's not a URL or path to an image, it is the actual binary data of the image itself
      * So you can use a call to this function wherever you would put an image. e.g.
      * <code>
-     * <img src="$humbler->getAvatar()" width="64", height="64" />
+     * <img src="<?php echo $humbler->getAvatar(); ?>" width="64", height="64" />
      * </code>
      *
      * Or you can also specify the dimensions by passing in an integer. Either: 16, 24, 30, 40, 48, 64, 96, 128, 512.
      * (all Tumblr Avatars are square)
      * <code>
-     * <img src="$humbler->getAvatar(128)" width="128", height="128" />
+     * <img src="<?php echo $humbler->getAvatar(128); ?>" width="128", height="128" />
      * </code>
      *
      * @param int|null $size

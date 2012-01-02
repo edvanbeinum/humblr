@@ -1,14 +1,14 @@
 # Humblr
 ### The 'so simple it could have been written by an idiot' PHP wrapper around the public Tumblr API
 
-The source code should be reasonably well commented, but here are some examples to get you on your way
+The source code should be reasonably well commented, but here are some examples to get you on your way.
+See the <humblr.edvanbenihm.com> for a more extensive version of this doc.
 
 Create an instance of Hublr
 
     $baseHostname = "david.tumblr.com";
     $tumblrConsumerKey = "ESeVhsqqFQffufDFsdaZJk3Mks1zM8UiZBWUzGYVwZ8eU";
-    $tumblrSecretKey = "mZRgkPOEEL3htwJBZ5QbNwiY4LMWVZBV156rTRtRvYHG3TWCc5j";
-    $humblr = new Humblr($baseHostname, $tumblrConsumerKey, $tumblrSecretKey);
+    $humblr = new Humblr($baseHostname, $tumblrConsumerKey);
 
 Get the first 9 posts
 
